@@ -1,0 +1,35 @@
+departments
+-
+dept_no VARCHAR(255) NOT NULL PK
+dept_name VARCHAR(255) NOT NULL
+
+dept_emp
+-
+emp_no INT NOT NULL PK
+dept_no VARCHAR(255)NOT NULL FK -< departments.dept_no
+
+Figure out how to do the combined thingy
+dept_manager
+-
+dept_no VARCHAR(255) PK
+emp_no VARCHAR(255) PK
+
+employees
+-
+emp_no INT PK
+emp_title VARCHAR(255) NOT NULL FK - titles.title_id
+birth_date DATE
+first_name VARCHAR(255) NOT NULL
+last_name VARCHAR(255) NOT NULL
+sex VARCHAR(1) NOT NULL
+hire_date
+
+salaries
+-
+emp_no INT NOT NULL PK
+salary INT NOT NULL
+
+titles
+-
+title_id VARCHAR(255) PK
+title VARCHAR(255) NOT NULL
