@@ -8,11 +8,10 @@ dept_emp
 emp_no INT NOT NULL PK
 dept_no VARCHAR(255)NOT NULL FK -< departments.dept_no
 
-Figure out how to do the combined thingy
 dept_manager
 -
-dept_no VARCHAR(255) PK
-emp_no VARCHAR(255) PK
+dept_no VARCHAR(255) FK-departments.dept_no
+emp_no INT NOT NULL PK
 
 employees
 -
@@ -22,11 +21,11 @@ birth_date DATE
 first_name VARCHAR(255) NOT NULL
 last_name VARCHAR(255) NOT NULL
 sex VARCHAR(1) NOT NULL
-hire_date
+hire_date DATE
 
 salaries
 -
-emp_no INT NOT NULL PK
+emp_no INT NOT NULL FK-employees.emp_no
 salary INT NOT NULL
 
 titles
